@@ -125,8 +125,8 @@ export async function uploadVersionJSON(
       .replace(/\.\./g, '.')
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[\u4e00-\u9fa5]/g, '');
-      
+      .replace(/[\u4e00-\u9fa5]/g, ''); //remove chinese characters
+
     const downloadUrl = downloadUrls.get(assetName);
     if (downloadUrl) {
       filteredAssets.push({
